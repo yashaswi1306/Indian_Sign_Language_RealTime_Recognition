@@ -4,12 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ISL Recognizer</title>
+    <link rel="stylesheet" href="/static/styles.css">
 </head>
 <body>
 
     <h1>
         Indian Sign Language Recognition
     </h1>
-    
+
+    <div class="status" id="status">
+        <span id="status_text">Connecting Camera</span>
+    </div>
+
+    <main class="layout">
+
+        <div class="view_finder">
+            <div class="frame">
+
+                <video muted autoplay playsinline id="vid"></video>
+                <canvas hidden id="canvas"></canvas>
+                <div class="hand_flag" id="hand_flag">No Hand Detected</div>
+            </div>
+        </div>
+
+    </main>
+
+     <div class="top_3">
+        <h2>Alternatives</h2>
+        <ul class="top_list" id="top_list">
+            <li class="top_3_items"><span>---</span></li>
+            <li class="top_3_items"><span>---</span></li>
+            <li class="top_3_items"><span>---</span></li>
+        </ul>
+    </div>
+
+
+<script src="/static/script.js"></script>
 </body>
 </html>

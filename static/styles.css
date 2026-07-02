@@ -1,0 +1,124 @@
+:root {
+    --bg: #0a0a0a;
+    --text: #f2ede8;
+    --main: #e44474;
+    --txt_small: #a08878;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    display: grid;
+    font-family: 'Courier New', Courier, monospace;
+    grid-template-columns: auto auto;
+    /* align-items: start; */
+    justify-content: center;
+    /* min-height: 100vh; */
+    padding: 2rem 1rem;
+    gap: 1rem;
+}
+
+h1 {
+    color: var(--main);
+}
+
+h2 {
+    color: var(--main);
+}
+
+.status {
+    color: var(--main);
+}
+
+h1, .status {
+    text-align: center;
+    grid-column: 1 / -1;
+}
+
+.top_3, .view_finder {
+    background: var(--bg);
+    padding: 1rem;
+    border-radius: 10px;
+    border: 2px solid var(--txt_small);
+}
+
+.top_list {
+    list-style: none;
+}
+
+.top_3_items {
+    /* border-bottom: 1px solid var(--main); */
+    padding: 0.5rem 0;
+}
+
+#vid {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scaleX(-1);
+}
+
+.text {
+    font-size: 1.5rem;
+    min-height: 2rem;
+}
+
+/* .sentence {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 0.5rem;
+    gap: 0.5rem;
+} */
+
+
+.frame {
+    position: relative;
+    width: 420px;
+    overflow: hidden;
+    background-color: var(--bg);
+    aspect-ratio: 4/3;
+}
+
+.hand_flag {
+    position: absolute;
+    bottom: 10px;
+    background: var(--bg);
+    left: 50%;
+    color: var(--main);
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    transform: translateX(-50%);
+}
+
+.hand_flag.hidden {
+    display: none;
+}
+
+.ctrl_btn {
+    background: var(--bg);
+    border: 1.5px solid var(--txt_small);
+    color: var(--text);
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    transition: transform 0.3s ease-in;
+
+}
+
+.ctrl_btn:hover {
+    color: var(--main);
+    border-color: var(--main);
+    transform: scale(1.05);
+}
+
+button {
+    transition: transform 0.3s ease-in;
+    background: var(--bg);
+}
